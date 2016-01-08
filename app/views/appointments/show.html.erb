@@ -7,7 +7,7 @@
     <div class="appointmentInfo">
       <div class="apptDate"><%= @appointment.date %></div>
       <div class="apptTime"><%= @appointment.time %></div>
-      <div class="apptSalon"><%#= @appointment.technician.salon.name %></div>
+      <div class="apptSalon"><%= check_box_tag @appointment.booked %></div>
       <div class="apptTech"><%#= @appointment.technician.name %></div>
       <div class="salonPrice"><%#= @appointment.technician.salon.price_range %></div>
     </div>

@@ -33,6 +33,23 @@ body {
   background-size: cover;
 }
 
+#title {
+  font-family: 'Russo One', sans-serif;
+  font-size: large;
+}
+
+.static_pages_category_ids {
+  font-family: 'Russo One', sans-serif;
+}
+
+
+@media (min-width: 768px) {
+    div[class^="col"]{padding-left:5px; padding-right:5px;}
+}
+
+@media (min-width: 992px) {
+    div[class^="col"]{padding-left:10px; padding-right:10px;}
+}
 ul {
     list-style-type: none;
     background-color: #F8F8F8;
@@ -73,6 +90,7 @@ a:hover {
 
 h1 {
   font-family: 'Russo One', sans-serif;
+  font-size: large;
 }
 
 p {

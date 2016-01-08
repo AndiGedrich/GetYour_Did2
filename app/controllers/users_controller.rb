@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  #before_filter :authenticate_user!
+  #before_filter :admin_only, :except =>
 
   def index
   #no one should have a reason to access lists of users unless an admin
@@ -8,11 +10,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    if current_user.client?
-      @user = User.find(params[:id])
-    elsif current_user.technician?
+    @user = User.find(params[:id])
+  end
+
+  def show_tech
       @technician = Technician.find(params[:id])
-    end
   end
 
 #new user
@@ -52,12 +54,11 @@ class UsersController < ApplicationController
       @user = User.find(params:id)
   end
 
-
-
   def update
     @user = User.find(params[:id])
     if current_user.client?
       @user.update_attributes(user_params)
+        redirect_to users_path, :notice => "Profile Updated"
     elsif current_user.technician?
       @user.update_attributes(technician_params)
     else :edit
@@ -72,8 +73,14 @@ class UsersController < ApplicationController
   end
 
   private
+    def admin_only
+      unless current_user.admin?
+        redirect_to :back, :alert =>"Access denied."
+      end
+    end
+
     def user_params
-      params.require(:user).permit(:role, :name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:role, :name, :email, :password)
     end
 
     def technician_params

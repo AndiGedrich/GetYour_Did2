@@ -1,6 +1,30 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>Edit your profile!</h1>
 
 <%= form_for @user do |f| %>
-  <%= f.file_field :picture %>
+
+<div>
+<%=f.label :name %>
+<%= f.text_field :name %>
+</div>
+
+<div>
+<%=f.label :Profile_photo %>
+<%= f.file_field :profile_img_url %>
+</div>
+
+<div>
+<%=f.label :Zip_code %>
+<%= f.text_field :zip_code %>
+</div>
+
+<div>
+<%=f.label :Email_address %>
+<%= f.text_field :email %>
+</div>
+
+<div>
+<%=f.label :Password %>
+<%= f.text_field :password %>
+</div>
+
 <% end %>

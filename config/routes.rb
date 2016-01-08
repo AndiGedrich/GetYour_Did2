@@ -23,9 +23,7 @@ Rails.application.routes.draw do
 
   get 'appointments/delete'
 
-  get 'categories/show'
-
-  get 'categories/new'
+  get 'categories/index'
 
   get 'services/new' => 'services#new', as: :new_service
   post 'services/' => 'services#create'
@@ -36,14 +34,11 @@ Rails.application.routes.draw do
 
   get 'salons/edit'
 
-  get 'technicians/new/:id' => 'technicians#new', as: :new_technician
-  post 'technicians/' => 'technicians#create'
-
-  get 'technicians/:id' => 'technicians#show', as: :technician
+  get 'users/show_tech/:id' => 'users#show_tech', as: :technician
 
 
   get 'users/new' => 'users#new', as: :new_user
-  get 'users/new_tech' => 'users#new_tech', as: :new_tech
+  get 'users/new_tech' => 'users#new_tech', as: :new_technician
   post 'users/' => 'users#create'
 
   get 'users/index'
@@ -55,11 +50,14 @@ Rails.application.routes.draw do
 
   delete 'users/:id' => 'users#destroy'
 
-  get 'sessions/new' => 'sessions#new', as: :new_session
   post 'sessions/new' => 'sessions#create', as: :create_session
   get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session
 
+  get 'static_pages/services_select' => 'static_pages#services_select', as: :update_services
+
+
   devise_for :users
+
 
   namespace :api do
     resources :salons, :defaults => { :format => 'json' }, only: [:index, :show]

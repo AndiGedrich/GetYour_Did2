@@ -14,12 +14,12 @@
 
 
   <%= f.label :Time %>
-  <%= f.time_select :time %>
+  <%= f.time_select :time, {minute_step:15} %>
 
   <%= f.label :service %>
-  <%= f.select :service_id, collection_select(:post, :service_ids, Service.all, :id, :name, {}, { :multiple => false}) %>
+  <%= f.collection_select :service_id, Service.all, :id, :name %>
 
-  <% f.hidden_field :user_id, :value => params[:user_id] %>
+  <% f.hidden_field :user_id, :value => params[:technician_id] %>
 
   <% f.hidden_field :booked, :value => false %>
 
@@ -29,6 +29,6 @@
 
   <%= f.submit "Create Appointment" %>
   <br>
-  <%= link_to "Cancel", technicians_path %>
+  <%= link_to "Cancel", root_path %>
   <% end %>
 </div>
