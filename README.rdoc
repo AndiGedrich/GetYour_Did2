@@ -1,28 +1,16 @@
 == README
+Get Your Did is a rough prototype of an app which is like Open Table
+for salon and beauty services.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Finding a stylist is hard, and no one has time anymore to research on Yelp
+then call around to find a stylist's availability.  Get Your Did provides a service
+to salons to list their available appointments, services offered and allow users to
+book available appointments without having to call around.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Ruby version
+ruby 2.2.3p173
+
+System dependencies
+
+
