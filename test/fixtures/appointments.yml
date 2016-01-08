@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-01-07
+  time: 2016-01-07 15:13:43
+  service_id: 1
+  booked: false
+
+two:
+  date: 2016-01-07
+  time: 2016-01-07 15:13:43
+  service_id: 1
+  booked: false

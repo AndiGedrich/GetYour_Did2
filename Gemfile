@@ -5,6 +5,7 @@ gem 'faker'
 gem 'bootstrap-sass'
 gem 'time_splitter'
 gem 'devise'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
