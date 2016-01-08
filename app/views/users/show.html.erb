@@ -4,8 +4,10 @@
 
 <% provide(:title, @user.name) %>
 <h1>
-<% if @user.profile_img_url == nil
+<% if @user.profile_img_url == nil %>
   <%= gravatar_for @user %>
   <%= @user.name %>
+<%= else %>
+  <%#= image_tag []
 </h1>
 
