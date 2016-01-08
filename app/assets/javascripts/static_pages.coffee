@@ -3,14 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$(document).ready(function() {
-  function displayVals(){
-    var serviceValue = $(#static_pages_category_id).val();
-    }
-      if serviceValue =! nil
-        $(#subNavAppt).removeClass('hide').addClass('show');
-      });
 
-  $("select").change( displayVals);
-    displayVals();
 
