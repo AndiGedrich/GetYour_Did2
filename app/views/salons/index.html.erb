@@ -1,3 +1,6 @@
+<!--need to style and get search and filter working -->
+
+<div id="container">
 <div id="navigation">
   <%= render "static_pages/header" %>
 </div>
@@ -32,7 +35,12 @@
     </div>
     <% end %>
     <% if @paginate %>
-    <%= paginate @salons %>
+    <%= paginate @salons, :per_page => 10 %>
     <% end %>
   </div>
+</div>
+
+<div id="footer">
+  <%= render "static_pages/footer" %>
+</div>
 </div>

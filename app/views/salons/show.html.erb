@@ -1,3 +1,5 @@
+<!--need to style and get associated technicians and appointments working -->
+
  <div id="navigation">
     <%= render "static_pages/header" %>
   </div>
@@ -19,8 +21,10 @@
     <p>display associated technician's pinterest boards</p>
   </div>
 
+<!-- need to make sure log in path from here works correctly to create a User.technician -->
+
   <div id="techSignup">
-    <%= link_to "Work Here?", new_tech_path(@salon.id) %>
+    <%= link_to "Work Here?", new_technician_path(@salon.id) %>
   </div>
 
   <div id="footer">

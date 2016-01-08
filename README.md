@@ -11,6 +11,29 @@ book available appointments without having to call around.
 Ruby version
 ruby 2.2.3p173
 
-System dependencies
+Gems Used
+Kaminari
+faker
+bootstrap-sass
+time-splitter
+rails_12factor
+
+(future)
+geokit
+
+Heroku Link (v1)
+https://getyour-did.herokuapp.com/
+
+Heroku Link (v2)
+https://dry-river-6577.herokuapp.com/
+This never loaded, I think I need to migrate the database again
+
+Git Repo
+https://github.com/AndiGedrich/GetYour_Did2
+
+https://github.com/AndiGedrich/GetYour_Did
+
+Trello Board
+https://trello.com/b/VISJtdhP/getyour-did-wdi-project2
 
 

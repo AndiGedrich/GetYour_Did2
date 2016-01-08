@@ -1,5 +1,11 @@
+<!--NEED TO Style!-->
+<div id="container">
+  <div id="navigation">
+    <%= render "static_pages/header" %>
+  </div>
+
 <h1>Appointments#new</h1>
-<p>Find me in app/views/appointments/new.html.erb</p>
+
 
 <div class="container">
 <%= form_for @appointment, url: {action: "create"} do |f| %>
@@ -32,3 +38,8 @@
   <%= link_to "Cancel", root_path %>
   <% end %>
 </div>
+
+<div id="footer">
+  <%= render "static_pages/footer" %>
+</div>
+

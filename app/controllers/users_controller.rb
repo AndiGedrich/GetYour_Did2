@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  #this is the second hot mess
+
   #before_filter :authenticate_user!
   #before_filter :admin_only, :except =>
 

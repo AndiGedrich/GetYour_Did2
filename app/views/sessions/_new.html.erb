@@ -1,5 +1,6 @@
 <% @user = User.new %>
 
+<!-- need to make sure this is talking to both logging in a User.technician and a User.client -->
 <%= form_for(:session, url: create_session_path) do |f| %>
 
   <% flash.each do |key,value| %>

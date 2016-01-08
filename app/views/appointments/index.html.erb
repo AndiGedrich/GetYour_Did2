@@ -1,3 +1,5 @@
+<!--NEED TO Style and get the search and filter running.  Consider adding the bootstrap table gem!-->
+<div id="container">
 <div id="navigation">
     <%= render "static_pages/header" %>
 </div>
@@ -34,11 +36,13 @@
     <%= paginate @appointments %>
     <% end %>
 
-    <p><%= link_to "Create New Appointment", new_appointment_path %></p?
+<!-- once technician log in working hide the create appointment link unless User.client is signed in-->
+    <p><%= link_to "Create New Appointment", new_appointment_path %></p>
   </div>
 </div>
 
     <div id="footer">
       <%= render "static_pages/footer" %>
     </div>
+  </div>
   </div>

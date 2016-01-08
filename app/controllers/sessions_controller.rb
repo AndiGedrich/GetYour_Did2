@@ -1,11 +1,13 @@
 class SessionsController < ApplicationController
+  #this is the hot mess that is totally broken
+
   #create user session
   def new
   end
 
   def create
     user = User.find_by( email: params[:session][:email].downcase)
-
+#the problem may be here in that users are getting created as technicians
     if user && user.authenticate(params[:session][:password])
       log_in user
       if current_user user.client?
