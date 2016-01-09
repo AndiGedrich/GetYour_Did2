@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :technicians
+
   root 'static_pages#home'
 
   get 'static_pages/home'
@@ -50,13 +50,15 @@ Rails.application.routes.draw do
 
   delete 'users/:id' => 'users#destroy'
 
+  devise_for :users
+
   post 'sessions/new' => 'sessions#create', as: :create_session
   get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session
 
   get 'static_pages/services_select' => 'static_pages#services_select', as: :update_services
 
 
-  devise_for :users
+
 
 
   namespace :api do
